@@ -2,10 +2,16 @@
 venv/
 __pycache__/
 *.pyc
+*.py[cod]
 
 # environment
+venv/
 .env
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Lambda package / deployment artifacts
+lambda_package/
+*.zip

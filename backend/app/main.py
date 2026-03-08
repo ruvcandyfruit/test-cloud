@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from mangum import Mangum
 
 app = FastAPI()
 
@@ -14,3 +15,5 @@ app.add_middleware(
 @app.get("/welcome")
 def welcome(name: str):
     return {"message": f"Welcome to Course Management {name}"}
+    
+handler = Mangum(app)
